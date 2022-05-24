@@ -1,0 +1,43 @@
+
+
+
+
+Anchor Element. 
+
+You can use a (anchor) elements to link to content outside of your web page.
+
+a elements need a destination web address called an href attribute. They also need anchor text. Here's an example:
+
+<a href="https://www.freecodecamp.org">this links to freecodecamp.org</a>
+
+a (anchor) elements can also be used to create internal links to jump to different sections within a webpage.
+
+To create an internal link, you assign a link's href attribute to a hash symbol # plus the value of the id attribute for the element that you want to internally link to, usually further down the page. You then need to add the same id attribute to the element you are linking to. An id is an attribute that uniquely describes an element.
+
+Below is an example of an internal anchor link and its target element:
+
+<a href="#contacts-header">Contacts</a>
+...
+<h2 id="contacts-header">Contacts</h2>
+When users click the Contacts link, they'll be taken to the section of the webpage with the Contacts heading element.
+
+
+
+Href="#"  to create a dead link.
+target="_blank" to open link in new tab.
+
+
+
+
+VScode shortcuts.
+
+Comment Code Block Ctrl+K+C/Ctrl+K+U
+If you select a block of code and use the key sequence Ctrl+K+C, you'll comment out the section of code.
+
+Pressing Alt+Z will break the line. aka toggle the line wrap. 
+
+Indentation
+For moving the text right and left you can use TAB key:
+
+TAB move the selected text right
+SHIFT + TAB move the selected text left

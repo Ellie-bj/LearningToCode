@@ -11,19 +11,31 @@
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        External styles are defined within the <link> element, inside the <head> section of an HTML page:
+    -->
+    <!--<link rel="stylesheet" href="Html.css">-->
+    <script src="Html.js"></script>
     <title>Html</title>
 </head>
 <body>
+    <div class="button">
+        <button class="CssButton" onclick="Enablecss()">Enable css</button>
+        <button class="CssButton" onclick="Revertcss()">Turn off Css</button>
+    </div>
     <!-- 
         <h1> Headline tag. different size dependong on the number from 1-6. 1 being the biggest and most important
     -->
-    <h1>Headline1</h1>
-    <h2>Headline2</h2>
-    <h3>Headline3</h3>
-    <h4>Headline4</h4>
-    <h5>Headline5</h5>
-    <h6>Headline6</h6>
-    
+
+    <div class="Header">
+        <h1>Headline1</h1>
+        <h2>Headline2</h2>
+        <h3>Headline3</h3>
+        <h4>Headline4</h4>
+        <h5>Headline5</h5>
+        <h6>Headline6</h6>
+    </div>
     <!-- 
         <p></p> Paragraph tag. there is an automatic space between the paragraphs and other content. 
     -->
@@ -42,5 +54,31 @@
     <!--<br> Line break tag. will break up the lines/ add space between content. needs no closing tag. theese types of tags are called void elements. void meaning empty becouse they have no content. -->
     <br>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br><br>Etiam gravida vulputate tellus elementum blandit. Sed elit ipsum, vehicula non porta vitae, rhoncus et elit. Aliquam in lobortis orci. Aliquam a dolor vel risus auctor fringilla a eget justo. Nunc sit amet mi odio. Nunc tempor augue vestibulum ante auctor pretium. Vivamus mi nisl, sollicitudin quis eros a, sollicitudin efficitur leo. Nulla quis facilisis arcu, a ultrices mauris. Duis finibus risus sed viverra luctus.
+    <br>
+
+    <img src="https://onextrapixel.com/wp-content/uploads/2013/07/weird-featured-180.jpg" alt="KissyFishy">
+
+    <div class="card">
+        <div class="cardHeader">
+            Card Header
+        </div>
+        <div class="innerCard">
+            List header
+            <ul>
+                <li>
+                    Something
+                </li>
+                <li>
+                    Something
+                </li>
+                <li>
+                    Something
+                </li>
+                <li>
+                    Something
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

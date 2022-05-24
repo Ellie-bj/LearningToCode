@@ -1,0 +1,17 @@
+/* 
+The two main types of length units are absolute and relative. Absolute units tie to physical units of length. For example, in and mm refer to inches and millimeters, respectively. Absolute length units approximate the actual measurement on a screen, but there are some differences depending on a screen's resolution.
+
+Relative units, such as em or rem, are relative to another length value. For example, em is based on the size of an element's font. If you use it to set the font-size property itself, it's relative to the parent's font-size.
+
+
+
+Cascading Order
+What style will be used when there is more than one style specified for an HTML element?
+
+All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
+
+Inline style (inside an HTML element)
+External and internal style sheets (in the head section)
+Browser default
+So, an inline style has the highest priority, and will override external and internal styles and browser defaults.
+*/

@@ -1,0 +1,43 @@
+
+body{
+    background-image:url("https://thumbs.dreamstime.com/z/beautiful-sky-clouds-soft-pastel-color-soft-cloud-sky-background-colorful-pastel-color-tone-beautiful-sky-clouds-164868755.jpg");
+    margin-left:20px;
+}
+
+/*______________________________________Top buttons________________________*/
+.button{
+    text-align: center;
+}
+.CssButton {
+ background-color: rgba(70,252,193,1);
+ font-weight: bold;
+ border-radius: 10px;
+ width: 200px;
+ cursor:pointer;
+}
+.CssButton:hover {
+    background: radial-gradient(circle, rgba(63,191,251,1) 0%, rgba(70,252,193,1) 100%);
+}
+/*_________________________________________________________________________*/
+
+.Header{
+    text-align: center;
+}
+.card{
+    background-color: rgb(175, 175, 175);
+    width: 300px;
+    border:1px solid black;
+}
+
+.cardHeader{
+    background-color: aqua;
+    text-align: center;
+    font-size:large;
+    padding:1%;
+    user-select: none;
+    border-bottom:1px solid black;
+}
+
+.innerCard{
+    padding:10px;
+}
