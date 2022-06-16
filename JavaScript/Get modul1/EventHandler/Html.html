@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleSheet" href="Event.css">
+    <title>Document</title>
+</head>
+
+<body onload="onLoadAlert()">
+      
+    <div class="page">
+        
+        <div class="topBar"><button onclick="refresh()">Refresh Page</button></div>
+        
+        <div class="header"><h1>JavaScript Events</h1></div>
+            
+        <div class="mainInfoContent">
+
+            <p class="pHeader">Definition and Usage:</p>
+
+            <p>HTML events are "things" that happen to HTML elements.<br>When JavaScript is used in HTML pages, JavaScript can "react" on these events.</p>
+
+            <p class="pHeader">Common HTML Events:</p>
+            <!--This is a Description list. the <dl> tag defines the list, the <dt> tag defines the term(name), and the <dd> tag describes each item.-->
+            <dl class="eventList"> 
+                <dt>onchange:</dt>
+                <dd>An HTML element has been changed.</dd>
+                <dt>onclick:</dt>
+                <dd>The user clicks and HTML element.</dd>
+                <dt>onmouseover:</dt>
+                <dd>The user moves the mouse over an HTML element.</dd>
+                <dt>onmouseout:</dt>
+                <dd>The user moves the mouse away from an HTML element.</dd>
+                <dt>onkeydown:</dt>
+                <dd>The user pushes a keyboard key.</dd>
+                <dt>onload:</dt>
+                <dd>The browser has finished loading the page.</dd>
+            </dl>
+
+            <h2>inneHTML.</h2>
+
+            <p class="pHeader">Definition and Usage:</p>
+            <p>It's a DOM Element, and the innerHTML property sets or returns the HTML content (inner HTML ) of an element.</p>
+
+            <p class="pHeader">Examples innerHTML:</p>
+            <dl>
+                <dt>Get the HTML content of an element with id="myP":</dt>
+                <dd>let html = document.getElementById("myP").innerHTML;</dd>
+                <dt>Change the HTML content of an element with id="demo":</dt>
+                <dd>document.getElementById("demo").innerHTML = "I have changed!";</dd>
+                <dt>Get the HTML content of a &lt;ul&gt; element with id="myList":</dt>
+                <dd>let html = document.getElementById("myList").innerHTML;</dd>
+                <dt>Delete the HTML content of a &lt;p&gt; element with id="demo":</dt>
+                <dd>element.innerHTML = "";</dd>
+            </dl>
+            </div>
+
+            <div class="functions">
+
+                <h2>A couple Eventhandlers tied to a function ↓</h2>
+
+                <button onclick="clickMe()">On click event.</button>
+                <button onclick="buttonFunction()">Show button function</button>
+                <!-- 
+                    This HTML element <button> is given an EventHandler (onclick)
+                    we then tie the event to a function with the name clickMe()
+
+                    then we create said function clickMe(){}; what we are doing is making the button element's event(onClick) call on the function we created when we click the <button> element.
+                -->
+                
+                <p id="pTag"></p>
+                <p id="hoverText" onmouseover="Over()" onmouseleave="notOver()">on mouse over event.</p>
+
+                <hr>
+
+                <h3>Ferdighet 2 - onclick => Kjør funksjon som endrer innerHTML til element ut fra Id</h3>
+
+                <p id="firstTag" onclick=" doSomething()">Paragraph one. click me!</p>
+                <p id="secondTag" onclick="">Paragraph two.</p>
+
+                <hr>
+                <h3>
+                    Quiz with multiple choices. <br>When a choice is made, there should be text confirming if the answer was correct or not.
+                </h3>
+
+                <p>Question: What is my name ? </p>
+
+                <div id="answer"></div>
+
+                <button onclick="firstButton()">Abigail</button>
+                <button onclick="seccondButton()">Elise</button>
+                <button onclick="thirdButton()">Julie</button>
+            </div>
+        
+
+        <div class="footer">
+            <button class="topButton" onclick="topFunction()">Back too top</button>
+        </div>
+        
+    </div>
+
+
+
+    <script>// When writing JS code inside an HTML file/Internal JS we use the <script> tags. 
+        function onLoadAlert(){
+            console.log('onload alert working.')
+            alert('on load event alert!')
+        }
+        
+        // Button onclick function. innputs div text.
+        function clickMe(){
+            console.log('You clicked the button')
+            document.getElementById("pTag").innerHTML = "You clicked the button!";
+        }
+
+        // Onclick to reveal function of button.
+        function buttonFunction(){
+            document.getElementById("pTag").innerHTML = "This is the function tied to the button's onclick event:" + "<br>"+ "<br>" + clickMe.toString();
+        }
+
+        // When the user hovers mouse over paragraph. change initial text.
+        function Over(){
+            console.log('Mouse is over H2 tag')
+            document.getElementById("hoverText").innerHTML = "User is Hovering!"; 
+        }
+
+        // When the user stops hovering mouse over paragraph. change initial text.
+        function notOver(){
+            console.log('Mouse is no longer over H2 tag')
+            document.getElementById("hoverText").innerHTML = "User is no longer Hovering!";
+        }
+
+        // When the user clics the first paragraph, change initial text of both p1 and p2.
+        function doSomething(){
+            document.getElementById('firstTag').innerHTML = 
+            'The function changed the first paragraphs innerHTML content to this text.';
+            document.getElementById('secondTag').innerHTML = 
+            'The function also changed the second paragraphs innerHTML content to this text.';
+        }
+
+        // Quiz answer buttons.
+        function firstButton(){
+            
+            document.getElementById('answer').innerHTML = 'ABIGAIL IS - INCORRECT!';
+            setTimeout(() => {alert('ABIGAIL IS INCORRECT!')}, 100);
+        }
+        function seccondButton(){
+            
+            document.getElementById('answer').innerHTML = 'ELISE IS - CORRECT!';
+            setTimeout(() => {alert('CORRECT ANSWER!')}, 100);
+        }
+        function thirdButton(){
+            document.getElementById('answer').innerHTML = 'JULIE IS - INCORRECT!';
+             setTimeout(() => {alert('JULIE IS INCORRECT!')}, 100);
+        }
+
+        // When the user clics the button, refresh page.
+        function refresh(){location.reload(); }
+            
+        // When the user clicks the button, scroll to top of page.
+        function topFunction(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+body{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   margin:0;
+   padding:0;
+   user-select: none;
+}
+
+div.page{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 60px 1fr 1fr 30px;
+    grid-template-areas:
+    'topButton'
+    'header' 
+    'mainInfoContent'
+    'functions'
+    'footerButton'
+    ;
+}
+
+p{
+    font-size: 20px;
+}
+
+/*TOP_BUTTON_BAR__________________________________________________________________________________*/
+div.topBar{
+    grid-area:topButton;
+    background-color: rgb(33, 33, 33);
+    text-align: center;
+}
+
+div.topBar > button{
+    text-align: center;
+    color: white;
+    background-color: rgb(42, 42, 42);
+    font-size: medium;
+    width: 100%;
+    height: 100%;
+}
+
+div.topBar > button:hover{
+    background-color: white;
+    color:black;
+}
+/*HEADER__________________________________________________________________________________*/
+
+div.header{
+    grid-area:header;
+    background-color: rgba(29, 102, 29, 0.95);
+    text-align: center;
+    text-decoration: underline;
+    font-size: large;
+    line-height: 10px;
+    border-bottom:2px solid black;
+}
+/*MAIN_INFO_CONTENT_______________________________________________________________________*/
+
+div.mainInfoContent{
+    grid-area:mainInfoContent;
+    background-color: rgba(117, 154, 133, 0.627);
+    padding-left: 100px;
+}
+
+dt{
+    font-weight: bold;
+    font-size: 17px;
+    padding:5px;
+    color:rgb(8, 5, 201);
+}
+
+.pHeader{
+    font-weight:bold; 
+    text-decoration:underline;
+}
+
+/*FUNCTIONS______________________________________________________________________________*/
+
+div.functions{
+    grid-area:functions;
+    background-color: rgba(46, 139, 86, 0.797);
+    text-align: center;
+    padding-bottom:10px;
+    border-top: 3px solid black;
+
+}
+
+div.functions > hr{
+    background-color: black;
+    height: 2px;
+    border:none;
+}
+
+div.functions > button{
+    background-color: rgb(220, 232, 172);
+    font-weight: bold;
+    font-size: 15px;
+    width: 200px;
+    padding:5px;
+}
+
+div.functions > button:hover{
+    background-color: white;
+    color: black;
+}
+div.functions > p{
+    color:darkblue;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#answer{
+    font-weight: Bold;
+    font-size: 50px;
+}
+#hoverText{
+    background-color: rgb(111, 177, 111);
+}
+#hoverText:hover{
+    color: White;
+    font-size: 50px;
+}
+/*FOOTER__________________________________________________________________________________*/
+
+div.footer{
+    grid-area:footerButton;
+    background-color: rgb(33, 33, 33);
+    text-align: center;
+}
+
+div.footer > button{
+    text-align: center;
+    color: white;
+    background-color: rgb(42, 42, 42);
+    font-size: medium;
+    width: 100%;
+    height: 100%;
+    display:block;
+
+}
+
+div.footer > button:hover{
+    background-color: white;
+    color:black;
+}
