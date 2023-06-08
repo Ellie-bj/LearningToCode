@@ -1,0 +1,25 @@
+body{
+    padding:0;
+    margin:0;
+}
+
+div.page{
+    background-color: red;
+    height: 100vh;
+}
+
+div.header{
+    background-color: blue;
+}
+
+div.sideMenu{
+    background-color: blueviolet;
+}
+
+div.mainContent{
+    background-color: bisque;
+}
+
+div.footer{
+    background-color:pink;
+}
