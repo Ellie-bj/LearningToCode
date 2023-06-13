@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="StyleSheet" href="style.css">
+    <srcipt src="script.js"></srcipt>
+</head>
+<body>
+    <div class="page">
+      
+        <div class="header">
+            <h1>JavaScript</h1>
+        </div> 
+        
+        <div class="topNav">
+            <a onclick="changePage(1)">Home</a>
+            <a onclick="changePage(2)">EventHandler</a>
+            <a onclick="changePage(3)">Contact</a>
+            <a onclick="changePage(4)">About</a>
+          </div>
+
+        <div id="mainContent" class="mainContent">StartPage</div>
+        <div class="footer">Coded and made by Ellie404</div>
+    </div>
+
+    <!--
+        This div has the style"display:none;" which lets me create a div with elements that wont show up 
+        unless i take the content and put it ino another div or change the style again.
+    -->
+
+    <div id="newsPage" style="display:none;">
+        <h2>What is JavaScript ?</h2>
+    </div>
+
+    <div id="contactPage" style="display:none;">
+        Contact
+    </div>
+
+    <div id="aboutPage" style="display:none;">
+        About
+    </div>
+
+<script>
+
+    
+
+    function changePage(v){
+        var page = document.getElementById("mainContent")
+        
+        if (v == 1){
+            location.reload();
+        } else if(v == 2) {
+            page.innerHTML = document.getElementById("newsPage").innerHTML;
+        } else if(v == 3) {
+            page.innerHTML = document.getElementById("contactPage").innerHTML;;
+        } else if(v == 4) {
+            page.innerHTML = document.getElementById("aboutPage").innerHTML;;
+        }
+    }
+
+</script>
+</body>
+</html>

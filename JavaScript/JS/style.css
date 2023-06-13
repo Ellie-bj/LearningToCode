@@ -1,0 +1,75 @@
+body{
+    padding:0;
+    margin:0;
+    overflow:scroll;
+    background-color: aquamarine;
+    overflow: hidden;
+}
+
+div.page{
+    height:100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #333;
+    display:grid; /* Generates a block-level grid*/
+    grid-template-areas:
+        "header" 
+        "topNav" 
+        "mainContent" 
+        "footer" 
+        ;/**/
+    grid-template-columns: 1fr;/**/
+    grid-template-rows: 2fr 1fr 10fr 20px ;
+}
+/*__________________________________Page header_________________________________*/
+
+div.header{
+    grid-area: header;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+/*__________________________________Navigation Bar______________________________*/
+.topNav{
+    grid-area: topNav;
+    background-color: #333;
+    overflow: hidden;
+    margin:auto;
+}
+
+.topNav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topNav a:Hover{
+    background-color: #ddd;
+    color: black;
+}
+
+.topNav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+/*__________________________________Page main content___________________________*/
+
+.mainContent{
+    grid-area: mainContent;
+    background-color:#ddd;
+}
+
+/*__________________________________Page footer__________________________________*/
+
+div.footer{
+    grid-area: footer;
+    background-color: #333;
+    color:grey;
+}
+
+
+
+@media only screen and (max-width:600px) {}
